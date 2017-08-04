@@ -13,37 +13,37 @@
                 <h:form>
                     <div class="campo">
                         <h:outputLabel for="nombres">Nombres:</h:outputLabel>
-                        <h:inputText id="nombres" value="" />
+                        <h:inputText id="nombres" value="#{personaBean.persona.nombres}" />
                     </div><!--.campo-->
                     <div class="campo">
                         <h:outputLabel for="apellidos">Apellidos:</h:outputLabel>
-                        <h:inputText id="apellidos" value="" />
+                        <h:inputText id="apellidos" value="#{personaBean.persona.apellidos}" />
                     </div><!--.campo-->
                     <div class="campo">
                         <h:outputLabel for="fechaNac">Fecha de Nacimiento:</h:outputLabel>
-                        <h:inputText id="fechaNac" value="" />
+                        <h:inputText id="fechaNac" value="#{personaBean.persona.fecha_nac}" />
                     </div><!--.campo-->
                     <div class="campo">
                         <h:outputLabel for="sexo">Sexo:</h:outputLabel>
-                        <h:inputText id="sexo" value="" />
+                        <h:inputText id="sexo" value="#{personaBean.persona.sexo}" />
                     </div><!--.campo-->
                     <div class="campo">
                         <h:outputLabel for="dui">DUI:</h:outputLabel>
-                        <h:inputText id="dui" value="" />
+                        <h:inputText id="dui" value="#{personaBean.persona.dui}" />
                     </div><!--.campo-->
                     <div class="campo">
                         <h:outputLabel for="nit">NIT:</h:outputLabel>
-                        <h:inputText id="nit" value="" />
+                        <h:inputText id="nit" value="#{personaBean.persona.nit}" />
                     </div><!--.campo-->
                     <div class="campo">
                             <h:outputLabel for="direccion">Direccion:</h:outputLabel>
-                            <h:inputText id="direccion" value="" />
+                            <h:inputText id="direccion" value="#{personaBean.persona.direccion}" />
                         </div><!--.campo-->
                     <div class="campo">
                         <h:outputLabel for="telefono">Telefono:</h:outputLabel>
-                        <h:inputText id="telefono" value="" />
+                        <h:inputText id="telefono" value="#{personaBean.persona.telefono}" />
                     </div><!--.campo-->
-                    <h:commandButton value="Crear"/>
+                    <h:commandButton value="Crear" actionListener="#{personaBean.registrar()}" action="index.xhtml?faces-redirect=true"/>
                 </h:form>
             </div>
         </div>
