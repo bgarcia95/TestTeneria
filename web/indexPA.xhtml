@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Prueba</title>
+        <link rel="stylesheet" href="resources/css/estilos.css"/>
+    </h:head>
+    <h:body>
+        <div class="contenedor">
+            <h1>Datos de la Persona</h1>
+            <div class="contenido">
+                <h:form>
+                    <div class="campo">
+                        <h:outputLabel for="nombres">Nombres:</h:outputLabel>
+                        <h:inputText id="nombres" value="#{personaBean.persona.nombres}" />
+                    </div><!--.campo-->
+                    <div class="campo">
+                        <h:outputLabel for="apellidos">Apellidos:</h:outputLabel>
+                        <h:inputText id="apellidos" value="#{personaBean.persona.apellidos}" />
+                    </div><!--.campo-->
+                    <div class="campo">
+                        <h:outputLabel for="fechaN">Fecha de Nacimiento:</h:outputLabel>
+                        <p:calendar id="fechaN" value="#{personaBean.persona.fecha_nac}" pattern="mm-MM-yy" locale="es"/>
+                    </div><!--.campo-->
+                    <div class="campo">
+                        <h:outputLabel for="sexo">Sexo:</h:outputLabel>
+                        <h:selectOneMenu id="sexo" value="#{personaBean.persona.sexo}">
+                            <f:selectItem noSelectionOption="true" itemLabel="---"/>
+                            <f:selectItem itemValue="F" itemLabel="Femenino"/>
+                            <f:selectItem itemValue="M" itemLabel="Masculino"/>
+                        </h:selectOneMenu>
+                    </div><!--.campo-->
+                    <div class="campo">
+                        <h:outputLabel for="dui">DUI:</h:outputLabel>
+                        <h:inputText id="dui" value="#{personaBean.persona.dui}" />
+                    </div><!--.campo-->
+                    <div class="campo">
+                        <h:outputLabel for="nit">NIT:</h:outputLabel>
+                        <h:inputText id="nit" value="#{personaBean.persona.nit}" />
+                    </div><!--.campo-->
+                    <div class="campo">
+                        <h:outputLabel for="direccion">Direccion:</h:outputLabel>
+                        <h:inputText id="direccion" value="#{personaBean.persona.direccion}" />
+                    </div><!--.campo-->
+                    <div class="campo">
+                        <h:outputLabel for="telefono">Telefono:</h:outputLabel>
+                        <h:inputText id="telefono" value="#{personaBean.persona.telefono}" />
+                    </div><!--.campo-->
+                    <h:commandButton class="boton" value="Crear" actionListener="#{personaBean.registrar()}" action="indexPA.xhtml?faces-redirect=true"/>
+                </h:form>
+            </div>
+        </div>
+
+        <h:outputScript library="js" name="spanishLocale.js"/>
+    </h:body>
+</html>
+
